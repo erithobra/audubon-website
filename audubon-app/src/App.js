@@ -95,7 +95,17 @@ class App extends Component {
           Audubon Society
         </header>
         <main>
-          <Home birds = {this.state.birds}/>
+          <Route
+            exact path = "/"
+            render={dunno => (
+              <Home birds = {this.state.birds} { ... dunno}/> )} 
+          />
+          
+          <Route 
+            path = '/show/:birdIndex'
+            component={Show}
+          />
+
         </main>
         <footer>
           Thanks for visiting!
