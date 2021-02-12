@@ -103,7 +103,8 @@ class App extends Component {
           
           <Route 
             path = '/show/:birdIndex'
-            component={Show}
+            render={dunno => (
+              <Show birds = {this.state.birds} { ... dunno}/> )}
           />
 
         </main>

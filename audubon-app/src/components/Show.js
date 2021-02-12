@@ -3,10 +3,16 @@ import React, { Component } from 'react';
 class Show extends Component {
     render() {
         console.log(this.props.match.params.birdIndex);
-        console.log(this.props.birds);
+
+        const birdy = this.props.match.params.birdIndex;
+
+        console.log(this.props.birds[birdy]);
+        
         return (
             <div>
-                Show {this.props.match.params.birds}
+                <img src={this.props.birds[birdy].image}></img>
+
+
             </div>
         )
     }
